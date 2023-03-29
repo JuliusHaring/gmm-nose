@@ -48,9 +48,9 @@ def evaluate_model(model_file: str, eval_file: str, out_file: str):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default='model.pkl', help='Path to the input model file')
+    parser.add_argument('--model_file', type=str, default='model.pkl', help='Path to the input model file')
     parser.add_argument('--eval_file', type=str, default='test_data.csv', help='Path to the input evaluation data file')
     parser.add_argument('--out_file', type=str, default='result.csv', help='Path to the output file')
     args = parser.parse_args()
 
-    evaluate_model(args.model, args.eval_file, args.out_file)
+    evaluate_model(args.model_file, args.eval_file, args.out_file)
